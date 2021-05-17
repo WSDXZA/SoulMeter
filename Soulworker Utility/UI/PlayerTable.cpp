@@ -140,11 +140,11 @@ VOID PlayerTable::StoreWindowWidth() {
 VOID PlayerTable::BeginPopupMenu() {
 
 	if(ImGui::BeginPopupContextItem()) {
-		if (ImGui::MenuItem(u8"시작/정지")) {
+		if (ImGui::MenuItem(u8"Start/Pause")) {
 			DAMAGEMETER.Toggle();
 		}
 
-		if (ImGui::MenuItem(u8"초기화")) {
+		if (ImGui::MenuItem(u8"Reset")) {
 			DAMAGEMETER.Clear();
 			PLAYERTABLE.ClearTable();
 		}
@@ -154,7 +154,7 @@ VOID PlayerTable::BeginPopupMenu() {
 		if (HISTORY.size() > 0)
 			history_open = true;
 
-		if (ImGui::BeginMenu(u8"전투내역", history_open)) {
+		if (ImGui::BeginMenu(u8"History", history_open)) {
 
 			for (INT i = 0; i < HISTORY.size(); i++) {
 				
@@ -173,11 +173,11 @@ VOID PlayerTable::BeginPopupMenu() {
 			ImGui::EndMenu();
 		}
 
-		if (ImGui::MenuItem(u8"옵션")) {
+		if (ImGui::MenuItem(u8"Options")) {
 			UIOPTION.OpenOption();
 		}
 
-		if (ImGui::MenuItem(u8"종료"))
+		if (ImGui::MenuItem(u8"Exit"))
 			exit(1);
 
 		ImGui::EndPopup();

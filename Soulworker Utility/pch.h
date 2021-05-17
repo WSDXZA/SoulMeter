@@ -33,9 +33,6 @@
 #include <d3d11.h>
 #include <dinput.h>
 
-// NPcap
-#include "npcap\Include\pcap.h"
-
 // WinDivert
 #include "Windivert\include\windivert.h"
 

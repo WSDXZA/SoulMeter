@@ -1,5 +1,4 @@
 #include "pch.h"
-#include ".\Packet Capture/MyNpcap.h"
 #include ".\Packet Capture/MyWinDivert.h"
 #include ".\Damage Meter/Damage Meter.h"
 #include ".\UI\UiWindow.h"
@@ -21,9 +20,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance, PSTR cmdLine, in
 	}
 
 	if (WINDIVERT.Init()) {
-		if (NPCAP.Init()) {
-			exit(-1);
-		}
+			exit(-1);	
 	}
 
 	if(UIWINDOW.Init(1, 1, 1, 1)){
